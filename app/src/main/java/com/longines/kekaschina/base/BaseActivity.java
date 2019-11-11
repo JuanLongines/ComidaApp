@@ -8,6 +8,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 public class BaseActivity extends AppCompatActivity {
+    public static final String TAG = BaseActivity.class.getSimpleName();
+
     public void addFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(getContentViewId(), fragment);
@@ -43,4 +45,7 @@ public class BaseActivity extends AppCompatActivity {
         return getRootView().getId();
     }
 
+    protected void initPresenter() {
+
+    }
 }
