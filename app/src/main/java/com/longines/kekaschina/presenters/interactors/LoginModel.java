@@ -12,7 +12,7 @@ public class LoginModel implements LoginPresenter {
     private LoginView view;
 
     public LoginModel(BaseView view) {
-        Log.i(TAG, "iniciado modelo");
+        Log.i(TAG, "Modelo iniciado");
         setView(view);
     }
 

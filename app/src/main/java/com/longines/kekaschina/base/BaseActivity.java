@@ -7,8 +7,15 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-public class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
     public static final String TAG = BaseActivity.class.getSimpleName();
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        initPresenter();
+        initComponents();
+    }
 
     public void addFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -45,11 +52,8 @@ public class BaseActivity extends AppCompatActivity {
         return getRootView().getId();
     }
 
-    protected void initPresenter() {
+    protected abstract void initPresenter();
 
-    }
+    protected abstract void initComponents();
 
-    protected void initComponents() {
-
-    }
 }

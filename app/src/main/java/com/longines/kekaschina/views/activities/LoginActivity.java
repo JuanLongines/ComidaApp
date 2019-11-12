@@ -16,7 +16,6 @@ public class LoginActivity extends BaseActivity implements LoginView {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initPresenter();
     }
 
     @Override
@@ -31,13 +30,11 @@ public class LoginActivity extends BaseActivity implements LoginView {
 
     @Override
     protected void initPresenter() {
-//        super.initPresenter();
         model = new LoginModel(this);
     }
 
     @Override
     protected void initComponents() {
-//        super.initComponents();
 
     }
 }
