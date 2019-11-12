@@ -34,4 +34,10 @@ public class LoginActivity extends BaseActivity implements LoginView {
 //        super.initPresenter();
         model = new LoginModel(this);
     }
+
+    @Override
+    protected void initComponents() {
+//        super.initComponents();
+
+    }
 }

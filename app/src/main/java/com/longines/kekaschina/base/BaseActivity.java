@@ -48,4 +48,8 @@ public class BaseActivity extends AppCompatActivity {
     protected void initPresenter() {
 
     }
+
+    protected void initComponents() {
+
+    }
 }
