@@ -17,8 +17,15 @@ public class LoginModel implements LoginPresenter {
     }
 
     @Override
-    public void doLogin() {
-
+    public boolean doLogin(String usuario, String password) {
+        if (!view.esUsuarioValido(usuario)) {
+            view.showUserError("Usuario invalido");
+            return false;
+        } else if (!view.esPasswordValido(password)) {
+            view.showPasswordError("Contraseña invalido");
+            return false;
+        }
+        return true;
     }
 
 
